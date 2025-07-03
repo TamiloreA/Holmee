@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -54,8 +55,12 @@ export default function HomePage() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button className="text-gray-600 hover:text-gray-800 px-4 py-2">Login</button>
-          <Button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-md">Get Started</Button>
+          <Link href="/signin">
+              <button className="text-gray-600 hover:text-gray-800 px-4 py-2">Login</button>
+          </Link>
+          <Link href="/signup">
+              <Button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-md">Get Started</Button>
+          </Link>
         </div>
       </header>
 
